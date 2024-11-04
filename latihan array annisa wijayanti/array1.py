@@ -1,0 +1,20 @@
+# Deklarasi array untuk menyimpan angka
+angka = []
+
+# Meminta input pertama
+for i in range(5):
+    elemen = int(input(f"Masukan angka ke-{i+1}: "))
+    angka.append(elemen)
+
+# Menghitung frekuensi kemunculuan
+frekuensi = {}
+for elemen in angka:
+    if elemen in frekuensi:
+        frekuensi[elemen] += 1
+    else:
+        frekuensi[elemen] = 1
+
+# Menampilkan hasil
+for elemen, jumlah in frekuensi.items():
+    print(f"Angka {elemen} muncul sebanyak {jumlah} kali.")
+    
